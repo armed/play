@@ -44,6 +44,30 @@ public class PlayDocumentation extends Controller {
         render(id, html, title, modules, apis, module);
     }
     
+    public static void cheatSheet() {
+        File cheatSheetDir = new File(Play.frameworkPath, "documentation/cheatsheets");
+        
+        if(cheatSheetDir.exists() && cheatSheetDir.isDirectory()) {
+            File[] sheetFiles = cheatSheetDir.listFiles(new FileFilter() {
+                
+                @Override
+                public boolean accept(File pathname) {
+                    return pathname.isFile() && pathname.getName().endsWith(".textile");
+                }
+            });
+            
+            List<String> sheets = new ArrayList<String>();
+            
+            for (File file : sheetFiles) {
+                sheets.add(toHTML(IO.readContentAsString(file)));
+            }
+            
+            render(sheets);
+        }
+        
+        notFound();
+    }
+    
     public static void image(String name, String module) {
         File image = new File(Play.frameworkPath, "documentation/images/"+name+".png");
         if(module != null) {

@@ -1,0 +1,84 @@
+h2 {
+    font-weight: lighter;
+    font-size: 24px;
+    line-height: 1.4em;
+}
+
+div.chapter {
+    width: 100%;
+    font-size: 14px;
+    display: none;
+}
+
+h1 {
+    background-color: #9FF25D;
+    color: #444;
+    font-size: 16px;
+    padding: 4px;
+}
+
+h1 + p {
+    border: 0px;
+    margin: 0px;
+}
+
+p {
+    border-top: 1px solid #777;
+    margin: 0px;
+}
+
+div#content table {
+    width: 100%;
+}
+
+#docTopbar {
+    position: relative;
+    background: #fff;
+    padding: 10px;
+    height: 70px;
+}
+
+#docTopbar {
+    font-size: 12px;
+    overflow: hidden;
+    -webkit-box-shadow: #eee -1px 1px 2px;
+    -moz-box-shadow: #eee -1px 1px 2px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#docTopbar a {
+    color: #568C00;
+}
+
+#backToToc {
+    font-size: 14px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+#backToToc span {
+    font-weight: bold;
+    color: #666;
+    font-size: 15px;
+}
+
+#searchBar {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    height: 45px;
+}
+
+#topLogo {
+    float: right;
+    text-align: center;
+}
+
+#topLogo #version {
+    font-size: 10px;
+    margin-top: 0;
+    font-weight: normal;
+}
